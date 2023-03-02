@@ -1,1 +1,10 @@
-<p>main-page works!</p>
+<p-toast position="center" key="main-page-toast"></p-toast>
+<ng-container *ngIf="paginatedMovieList; else loading">
+  <app-movie-list [movies]="paginatedMovieList.results"></app-movie-list>
+</ng-container>
+
+<ng-template #loading>
+  <div class="flex justify-content-center align-items-center min-h-screen">
+    <p-progressSpinner></p-progressSpinner>
+  </div>
+</ng-template>

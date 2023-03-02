@@ -1,2 +1,13 @@
-<p>root-page works!</p>
-<router-outlet></router-outlet>
+<div class="container">
+  <p-menubar [model]="items">
+    <ng-template pTemplate="start">
+      <img
+        src="assets/img/popcorn-logo-72.png"
+        alt="Movies"
+        height="40"
+        class="mr-2"
+      />
+    </ng-template>
+  </p-menubar>
+  <router-outlet></router-outlet>
+</div>

@@ -1,12 +1,20 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-
+import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
+import { MessageService } from 'primeng/api';
+import { MenubarModule } from 'primeng/menubar';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule
-  ]
+  exports: [
+    ButtonModule,
+    CardModule,
+    MenubarModule,
+    ProgressSpinnerModule,
+    ToastModule,
+  ],
+  providers: [MessageService],
 })
-export class PrimeModule { }
+export class PrimeModule {}

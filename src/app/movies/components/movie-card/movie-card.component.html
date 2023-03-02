@@ -1,0 +1,19 @@
+<p-card
+  [header]="movie.title | titlecase"
+  subheader="Card Subheader"
+  styleClass="p-card-shadow min-h-full"
+>
+  <ng-template pTemplate="header">
+    <img alt="Card" [src]="movie.poster_path | posterImage : 'w500'" />
+  </ng-template>
+  <p>
+    {{ movie.overview }}
+  </p>
+  <div class="flex justify-content-end">
+    <a
+      [routerLink]="['movie', movie.id]"
+      [ngStyle]="{ color: 'var(--red-300)' }"
+      >Know more...</a
+    >
+  </div>
+</p-card>
