@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Press Start 2P", "Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  background: rgb(9, 9, 121);
+  background: radial-gradient(
+    circle,
+    rgba(9, 9, 121, 1) 0%,
+    rgba(2, 0, 36, 1) 100%
+  );
+}
+
+section.notFound {
+  height: 100%;
+  width: 100%;
+}
+
+section.notFound h1 {
+  color: red;
+  font-size: 100px;
+}
+
+section.notFound h2 {
+  font-size: 50px;
+}
+
+div.text a {
+  text-decoration: underline;
+}
+
+div.text a:hover {
+  color: red;
+  text-decoration: none;
+}
+
+section.notFound div.img img {
+  max-width: 70%;
+  height: auto;
+}
+
+@media only screen and (max-width: 1140px) {
+  section.notFound {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  section.notFound div.img img {
+    width: 70%;
+  }
+
+  section.notFound h1 {
+    font-size: 50px;
+  }
+
+  section.notFound h2 {
+    font-size: 25px;
+  }
+
+  div.text a:active {
+    color: red;
+    text-decoration: underline;
+  }
+}
