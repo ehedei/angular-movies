@@ -1,4 +1,17 @@
 <p-toast position="center" key="main-page-toast"></p-toast>
+<div class="flex justify-content-end p-4">
+  <span class="p-input-icon-left">
+    <i class="pi pi-search"></i>
+    <input
+      type="text"
+      pInputText
+      placeholder="Search"
+      [(ngModel)]="query"
+      (keyup.enter)="search()"
+    />
+  </span>
+</div>
+
 <ng-container *ngIf="paginatedMovieList; else loading">
   <app-movie-list [movies]="paginatedMovieList.results"></app-movie-list>
 </ng-container>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { MoviesRoutingModule } from './movies-routing.module';
 import { MainPageComponent } from './pages/main-page/main-page.component';
@@ -21,6 +22,6 @@ import { PosterImagePipe } from './pipes/poster-image.pipe';
     MovieListComponent,
     PosterImagePipe,
   ],
-  imports: [CommonModule, MoviesRoutingModule, PrimeModule],
+  imports: [CommonModule, FormsModule, MoviesRoutingModule, PrimeModule],
 })
 export class MoviesModule {}

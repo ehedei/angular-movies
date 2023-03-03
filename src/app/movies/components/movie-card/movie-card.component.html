@@ -1,11 +1,25 @@
 <p-card
   [header]="movie.title | titlecase"
-  subheader="Card Subheader"
+  [subheader]="movie.release_date"
   styleClass="p-card-shadow min-h-full"
 >
   <ng-template pTemplate="header">
-    <img alt="Card" [src]="movie.poster_path | posterImage : 'w500'" />
+    <img
+      [alt]="movie.title | titlecase"
+      [src]="movie.poster_path | posterImage : 'w500'"
+    />
   </ng-template>
+
+  <div class="rating">
+    <p-rating
+      [ngModel]="movie.vote_average"
+      [readonly]="true"
+      [stars]="10"
+      [cancel]="false"
+    ></p-rating>
+    <span>{{ movie.vote_average }}</span>
+  </div>
+
   <p>
     {{ movie.overview }}
   </p>
@@ -13,7 +27,8 @@
     <a
       [routerLink]="['movie', movie.id]"
       [ngStyle]="{ color: 'var(--red-300)' }"
-      >Know more...</a
     >
+      Know more...
+    </a>
   </div>
 </p-card>

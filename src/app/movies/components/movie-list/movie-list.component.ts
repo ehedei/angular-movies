@@ -4,7 +4,7 @@ import { Movie } from '../../interfaces/paginated-movie-list.interface';
 @Component({
   selector: 'app-movie-list',
   templateUrl: './movie-list.component.html',
-  styles: [],
+  styleUrls: ['./movie-list.component.scss'],
 })
 export class MovieListComponent {
   @Input() movies: Movie[] = [];

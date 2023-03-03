@@ -41,4 +41,22 @@ export class MovieService {
       params,
     });
   }
+
+  searchMovies(
+    query: string,
+    page: number = 1
+  ): Observable<PaginatedMovieList> {
+    const params = {
+      page,
+      query,
+      api_key: this.apiKey,
+    };
+
+    return this.httpClient.get<PaginatedMovieList>(
+      this.apiUrl + '/search/movie',
+      {
+        params,
+      }
+    );
+  }
 }

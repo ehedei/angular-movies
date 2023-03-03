@@ -1,7 +1,14 @@
-<div class="grid p-8">
+<div class="grid m-0 px-8 pb-8" *ngIf="movies?.length; else moviesNotFound">
   <app-movie-card
     *ngFor="let movie of movies"
     [movie]="movie"
     class="col-3 gap-3"
   ></app-movie-card>
 </div>
+
+<ng-template #moviesNotFound>
+  <div class="movies-not-found-cnt">
+    <img src="assets/img/backToFuture.png" class="my-8" />
+    <h2 class="text-xl">Movies not found</h2>
+  </div>
+</ng-template>
